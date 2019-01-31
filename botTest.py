@@ -82,3 +82,7 @@ async def on_message(message):
         await client.send_message(message.channel,msg)
         
 
+     client.run(os.getenv'NTEwMjE1NzA5NjUzOTkxNDM1.DsjDeQ.3zYvau7sA42qyt_nKjmyQbE_7h0'))
+    
+    
+    
