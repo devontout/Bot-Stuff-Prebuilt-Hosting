@@ -4,14 +4,13 @@ from discord.ext import commands
 import asyncio
 import time
 import random
-import youtube_dl
 from discord import Game
 
 
 Client = discord.client
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-playes = {}
+
 
 @client.event
 async def on_member_join(member):
@@ -81,29 +80,5 @@ async def on_message(message):
     if message.content.startswith ('hey'):
         msg = '{0.author.mention}'.format(message)
         await client.send_message(message.channel,msg)
-
-     #playing music
-
-@client.command(pass_context=True)
-async def join(ctx):
-    channel = ctx.message.author.voice.voice_channel
-    await client.join_voice_channel(channel)
-
-@client.command(pass_context=True)
-async def leave(ctx):
-    server = ctx.message.server
-    voice_client = client.voice_client_in(server)
-    await voice_client.disconnect()
-
-@client.command(pass_context=True)
-async def play(ctx, url):
-    server = ctx.message.server
-    voice_client = client.voice_client_in(server)
-    player = await voice_client.create_ytdl_player(url)
-    players[server.id] = player
-    player.start()
-
-
-  
         
 client.run('NTEwMjE1NzA5NjUzOTkxNDM1.DsjDeQ.3zYvau7sA42qyt_nKjmyQbE_7h0')
