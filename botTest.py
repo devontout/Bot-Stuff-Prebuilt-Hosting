@@ -81,7 +81,6 @@ async def on_message(message):
         msg = '{0.author.mention}'.format(message)
         await client.send_message(message.channel,msg)
         
-client.run'NTEwMjE1NzA5NjUzOTkxNDM1.DsjDeQ.3zYvau7sA42qyt_nKjmyQbE_7h0'))
-    
+client.run('NTEwMjE1NzA5NjUzOTkxNDM1.DsjDeQ.3zYvau7sA42qyt_nKjmyQbE_7h0')
     
     
