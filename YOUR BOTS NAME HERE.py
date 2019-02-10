@@ -59,4 +59,4 @@ async def clear(ctx, number):
         msg = '{0.author.mention}+ HEY!!!! \nNo bad words!!!'.format(message)
         await client.send_message(message.channel,msg)
         await client.delete_message(message)
-client.run('token')
+client.run('NTQ0MTg2MjcwNDExMTI4ODMy.D0Hrgw.0GrEfjInRBg1Kpo8CccmB7dNUCg')
