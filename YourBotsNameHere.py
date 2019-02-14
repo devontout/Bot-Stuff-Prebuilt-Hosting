@@ -40,15 +40,15 @@ async def on_message(message):
 #switch "help" for your input message 
 #switch "what do you need help with good sir?" for the output message
 @client.event    
-    if ('help') in message.content:
+   if ('help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
-    if ('Help') in message.content:
+   if ('Help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
-    if ('frick') in message.content:
+   if ('frick') in message.content:
         msg = '{0.author.mention}+ HEY!!!! \nNo bad words!!!'.format(message)
         await client.send_message(message.channel,msg)   
-    if ('frick') in message.content:
-         await client.delete_messages(message)   
+   if ('frick') in message.content:
+        await client.delete_messages(message)   
        
         
 #the bot can recognize "hey" if it's the first word in the message
