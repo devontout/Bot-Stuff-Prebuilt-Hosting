@@ -56,7 +56,7 @@ async def on_message(message):
 #switch "hey" for your input message 
 #switch "heeellloooo there" for the output message
 @client.event
-    
+async def on_message(message):   
     if message.content.startswith ('hey'):
         await client.send_message(message.channel,'heeellloooo there')
 
