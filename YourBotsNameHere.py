@@ -45,7 +45,7 @@ async def on_message(message):
         await client.send_message(message.channel,'heeellloooo there')
 
 #making your bot delete messages
- @client.command(pass_context = True, aliases=['Clear'])
+@client.command(pass_context = True, aliases=['Clear'])
 async def clear(ctx, number):
     mgs = [] #Empty list to put all the messages in the log
     number = int(number) #Converting the amount of messages to delete to an 
