@@ -1,1 +1,1 @@
-worker: python YOUR BOTS NAME HERE.py
+worker: python YourBotsNameHere.py
