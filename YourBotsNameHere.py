@@ -41,7 +41,7 @@ async def on_message(message):
 #switch "what do you need help with good sir?" for the output message
 @client.event
 async def on_message(message):
-     if ('help') in message.content:
+    if ('help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
     if ('Help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
