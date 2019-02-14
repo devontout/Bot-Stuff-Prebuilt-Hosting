@@ -39,8 +39,8 @@ async def on_message(message):
 #the bot can recognize help anywhere in the message
 #switch "help" for your input message 
 #switch "what do you need help with good sir?" for the output message
- @client.event    
-    if ('help') in message.content:
+@client.event    
+     if ('help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
     if ('Help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
