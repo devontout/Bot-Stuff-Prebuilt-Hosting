@@ -23,17 +23,16 @@ async def on_member_join(member):
 async def on_ready():
     await client.change_presence(game=Game(name='YOUR GAME OR MUSIC HERE'))
     print('Running...PUT LITTERALY ANYTHING YOU WANT HERE ') 
-
-@client.event
-async def on_message(message):
+@client.event  
+async def on_message(message):   
+    if message.content.startswith ('hey'):
+        await client.send_message(message.channel,'heeellloooo there')
     if message.content == 'ping':
         await client.send_message(message.channel,'pong')   
     if message.content == 'rules':
         await client.send_message(message.channel,'1. Discord module not found?:\n - Go to Command prompt\n - Type in pip install discord\n - Your problem is fixed!\n2. PyNaCi Libary is not installed?:\n - This is a no module found error\n - You will need to install the module\n - To install do: pip install discord[voice]\n3. How to add python to your path?:\n - When you are in the process of installing python\n - There is a: :empty: Add to path?\n - You will click the check mark\n4.If you ask for one of us to make you a bot, without pay, you will be kicked / banned :xd:\n5.Don’t talk in #💰-advertisement-💰 except when posting programing related server, bots or when certified/admin needs to warn someone.\n6.Dont be a retard plox, and use common sense.\n Be patient, not everyone can work around your schedule. ')   
     if message.content == 'Rules':
         await client.send_message(message.channel,'1. Discord module not found?:\n - Go to Command prompt\n - Type in pip install discord\n - Your problem is fixed!\n2. PyNaCi Libary is not installed?:\n - This is a no module found error\n - You will need to install the module\n - To install do: pip install discord[voice]\n3. How to add python to your path?:\n - When you are in the process of installing python\n - There is a: :empty: Add to path?\n - You will click the check mark\n4.If you ask for one of us to make you a bot, without pay, you will be kicked / banned :xd:\n5.Don’t talk in #💰-advertisement-💰 except when posting programing related server, bots or when certified/admin needs to warn someone.\n6.Dont be a retard plox, and use common sense.\n Be patient, not everyone can work around your schedule. ')   
-@client.event   
-async def on_message(message):
     if ('help') in message.content:
         await client.send_message(message.channel,'what do you need help with good sir?')
     if ('Help') in message.content:
@@ -43,11 +42,6 @@ async def on_message(message):
         await client.send_message(message.channel,msg)   
     if ('frick') in message.content:
         await client.delete_messages(message)   
-@client.event  
-async def on_message(message):   
-    if message.content.startswith ('hey'):
-        await client.send_message(message.channel,'heeellloooo there')
-        
 @client.command(pass_context = True, aliases=['Clear'])
 async def clear(ctx, number):
     mgs = [] #Empty list to put all the messages in the log
