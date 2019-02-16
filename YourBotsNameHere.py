@@ -24,7 +24,7 @@ async def on_ready():
     await client.change_presence(game=Game(name='YOUR GAME OR MUSIC HERE'))
     print('Running...PUT LITTERALY ANYTHING YOU WANT HERE ') 
 
-@client.event
+ @client.event
 async def on_message(message):
     if message.content == 'ping':
         await client.send_message(message.channel,'pong')   
