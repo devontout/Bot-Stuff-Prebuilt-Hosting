@@ -27,7 +27,7 @@ async def on_ready():
 #Simple text response 
 #switch ping for your input message 
 #switch pong for the output message
-@client.event
+ @client.event
 async def on_message(message):
     if message.content == 'ping':
         await client.send_message(message.channel,'pong')   
